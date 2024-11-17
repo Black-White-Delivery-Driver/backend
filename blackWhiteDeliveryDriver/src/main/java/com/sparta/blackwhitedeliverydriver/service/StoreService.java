@@ -37,8 +37,13 @@ public class StoreService {
     private final ProductRepository productRepository;
 
     @Transactional
-    public UUID createStore(@Valid StoreRequestDto requestDto, List<Category> categoryList, User user) {
-        // 점포 중복확인 (이름, 전화번호)
+    public StoreIdResponseDto createStore(@Valid StoreRequestDto requestDto, User user) {
+        // 점포 중복확인 (이름)
+        Optional<Store> requestStoreName = storeRepository.findByStoreName(requestDto.getStoreName());
+        if(checkStoreName(requestStoreName.get().getStoreName())) {
+            throw new IllegalArgumentException(StoreExceptionMessage.DUPLICATED_STORE_NAME.getMessage());
+        }
+        // 전화번호는 같은 사장이 등록하는 경우도 있을거 같음
 
         // 점포 등록
         Store store = Store.from(requestDto, user);
@@ -51,10 +56,17 @@ public class StoreService {
     }
 
     @Transactional
-    public UUID updateStore(UUID storeId, StoreRequestDto requestDto, List<Category> newCategoryList, UserDetailsImpl userDetails) {
+    public StoreIdResponseDto updateStore(UUID storeId, StoreRequestDto requestDto, UserDetailsImpl userDetails) {
+        // OWNER의 가게인지 확인 -> 본인 가게만 수정
+        if(!isStoreOfOwner(storeId, userDetails)){
+            throw new IllegalArgumentException(StoreExceptionMessage.FORBIDDEN_ACCESS.getMessage());
+        }
+        // 카테고리 등록
+        List<Category> newCategoryList = getCategoryList(requestDto.getCategory());
+
         // 점포 조회
         Store store = storeRepository.findById(storeId).orElseThrow(
-                () -> new NullPointerException(requestDto.getStoreName() + "은(는) 존재하지 않는 점포입니다.")
+                () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
         );
 
         // 기존 카테고리 전체 삭제
@@ -101,9 +113,14 @@ public class StoreService {
     }
 
     @Transactional
-    public void deleteStore(UUID storeId, UserDetailsImpl userDetails) {
+    public StoreIdResponseDto deleteStore(UUID storeId, UserDetailsImpl userDetails) {
+        // OWNER의 가게인지 확인 -> 본인 가게만 삭제
+        if(!isStoreOfOwner(storeId, userDetails)){
+            throw new IllegalArgumentException(StoreExceptionMessage.FORBIDDEN_ACCESS.getMessage());
+        }
+
         Store store = storeRepository.findById(storeId).orElseThrow(
-                () -> new NullPointerException("존재하지않는 점포입니다.")
+                () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
         );
 
         store.setDeletedDate(LocalDateTime.now());
@@ -112,7 +129,7 @@ public class StoreService {
 
     public String getNameOfOwner(UUID storeId) {
         User user = storeRepository.findById(storeId).map(Store::getUser).orElseThrow(
-                () -> new IllegalArgumentException(storeId + "라는 점포가 없습니다.")
+                () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
         );
 
         return user.getUsername();
@@ -150,7 +167,10 @@ public class StoreService {
         Sort sort = Sort.by(direction, sortBy);
         Pageable pageable = PageRequest.of(page, size, sort);
 
-        UserRoleEnum userRoleEnum = user.getRole();
+        Optional<User> newUser = Optional.ofNullable(userRepository.findById(user.getUsername()).orElseThrow(
+                () -> new UsernameNotFoundException(ExceptionMessage.USER_NOT_FOUND.getMessage())
+        ));
+        UserRoleEnum userRoleEnum = newUser.get().getRole();
 
         Page<Store> storeList;
         List<StoreResponseDto> storeResponseDtoList = new ArrayList<>();
@@ -162,7 +182,7 @@ public class StoreService {
                 List<String> categoryNameList = new ArrayList<>();
                 for (StoreCategory storeCategory : storeCategoryList){
                     Optional<Category> category = Optional.ofNullable(categoryRepository.findById(storeCategory.getCategory().getCategoryId()).orElseThrow(
-                            () -> new NullPointerException(storeCategory.getCategory().getCategoryId() + "라는 카테고리 ID는 없습니다.")
+                            () -> new NullPointerException(CategoryExceptionMessage.CATEGORY_ID_NOT_FOUND.getMessage())
                     ));
 
                     categoryNameList.add(category.get().getName());
@@ -202,5 +222,29 @@ public class StoreService {
         }
 
         return storeResponseDtoList;
+    }
+
+    private List<Category> getCategoryList(String categoryNames) {
+        Set<String> categorySet = new HashSet<>();
+        Arrays.stream(categoryNames.split(","))
+                .map(String::trim)
+                .forEach(categorySet::add);
+
+        List<Category> categoryList = new ArrayList<>();
+        for(String categoryName : categorySet) {
+            Category category = categoryRepository.findByName(categoryName).orElseThrow(
+                    () -> new NullPointerException(CategoryExceptionMessage.CATEGORY_ID_NOT_FOUND.getMessage()));
+            categoryList.add(category);
+        }
+
+        return categoryList;
+    }
+
+    private boolean isStoreOfOwner(UUID storeId, UserDetailsImpl userDetails) {
+        User storeOwnerInfo = storeRepository.findById(storeId).get().getUser();
+        Optional<User> loginUserInfo = userRepository.findById(userDetails.getUsername());
+
+        if(storeOwnerInfo.getUsername().matches(loginUserInfo.get().getUsername())){ return true; }
+        return false;
     }
 }

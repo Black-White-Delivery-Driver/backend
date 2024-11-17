@@ -32,4 +32,8 @@ public class Category extends BaseEntity {
                 .name(categoryName)
                 .build();
     }
+
+    public void update(String name) {
+        this.name = name;
+    }
 }

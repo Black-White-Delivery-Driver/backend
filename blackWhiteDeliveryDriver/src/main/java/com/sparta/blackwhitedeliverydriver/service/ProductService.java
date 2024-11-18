@@ -54,7 +54,7 @@ public class ProductService {
     }
 
     @Transactional
-    public ProductIdResponseDto createProductByOwner(CreateProductRequestDto requestDto, UserDetails userDetails) {
+    public ProductIdResponseDto createProduct(CreateProductRequestDto requestDto, UserDetails userDetails) {
         Optional<User> curUser = userRepository.findById(userDetails.getUsername());
 
         if(curUser.get().getRole().equals(UserRoleEnum.OWNER)){
@@ -63,10 +63,6 @@ public class ProductService {
             if(!nameOfStoreOwner.equals(curUser.get().getUsername())) {
                 throw new IllegalArgumentException(StoreExceptionMessage.FORBIDDEN_ACCESS.getMessage());
             }
-        }
-        else if(curUser.get().getRole().equals(UserRoleEnum.MANAGER) || curUser.get().getRole().equals(UserRoleEnum.MASTER)){
-            // 관리자가 점주의 가게 등록
-            throw new IllegalArgumentException(StoreExceptionMessage.FORBIDDEN_ACCESS.getMessage());
         }
 
         // 음식 등록

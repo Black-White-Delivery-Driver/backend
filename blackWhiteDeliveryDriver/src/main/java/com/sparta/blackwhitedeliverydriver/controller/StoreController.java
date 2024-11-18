@@ -52,9 +52,10 @@ public class StoreController {
     public ResponseEntity<?> getStoreById(
             @RequestParam(value = "isExceptDelete", defaultValue = "true") Boolean isExceptDelete,
             @RequestParam(value = "isPublic", defaultValue = "true") Boolean isPublic,
-            @PathVariable("storeId") UUID storeId
+            @PathVariable("storeId") UUID storeId,
+            @AuthenticationPrincipal UserDetailsImpl userDetails, Sort sort
     ){
-        StoreResponseDto storeResponseDto = storeService.getStore(isExceptDelete, isPublic, storeId);
+        StoreResponseDto storeResponseDto = storeService.getStore(isExceptDelete, isPublic, storeId, userDetails);
         return ResponseEntity.status(HttpStatus.OK).body(storeResponseDto);
     }
 

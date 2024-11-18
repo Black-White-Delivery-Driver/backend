@@ -74,27 +74,37 @@ public class StoreService {
         return storeResponseDtoList;
     }
 
-    public StoreResponseDto getStore(Boolean isExceptDelete, Boolean isPublic, UUID storeId) {
+    public StoreResponseDto getStore(Boolean isExceptDelete, Boolean isPublic, UUID storeId,
+                                     UserDetailsImpl userDetails) {
         Store store;
         if(isExceptDelete && isPublic){
             store = storeRepository.findByStoreIdAndDeletedDateIsNullAndDeletedByIsNullAndIsPublicTrue(storeId).orElseThrow(
                     () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
             );
         }
-        else if(isExceptDelete){
-            store = storeRepository.findByStoreIdAndDeletedDateIsNullAndDeletedByIsNull(storeId).orElseThrow(
-                    () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
-            );
-        }
-        else if(isPublic){
-            store = storeRepository.findByStoreIdAndIsPublicTrue(storeId).orElseThrow(
-                    () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
-            );
-        }
         else {
-            store = storeRepository.findById(storeId).orElseThrow(
-                    () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
-            );
+            Optional<User> user = userRepository.findById(userDetails.getUsername());
+            if(!user.isPresent()) throw new UsernameNotFoundException(ExceptionMessage.USER_NOT_FOUND.getMessage());
+
+            if(user.get().getRole().equals(UserRoleEnum.MANAGER) || user.get().getRole().equals(UserRoleEnum.MASTER)){
+                throw new IllegalArgumentException(StoreExceptionMessage.FORBIDDEN_ACCESS.getMessage());
+            }
+
+            if(isExceptDelete){
+                store = storeRepository.findByStoreIdAndDeletedDateIsNullAndDeletedByIsNull(storeId).orElseThrow(
+                        () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
+                );
+            }
+            else if(isPublic){
+                store = storeRepository.findByStoreIdAndIsPublicTrue(storeId).orElseThrow(
+                        () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
+                );
+            }
+            else {
+                store = storeRepository.findById(storeId).orElseThrow(
+                        () -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage())
+                );
+            }
         }
 
         List<StoreCategory> storeCategoryList = storeCategoryRepository.findAllByStoreStoreId(store.getStoreId());

@@ -132,14 +132,19 @@ public class ReviewService {
         Review review = reviewRepository.findById(reviewId)
                 .orElseThrow(() -> new NullPointerException(ReviewExceptionMessage.REVIEW_NOT_FOUND.getMessage()));
 
+        Store store = storeRepository.findById(review.getOrder().getStore().getStoreId())
+                .orElseThrow(() -> new NullPointerException(StoreExceptionMessage.STORE_NOT_FOUND.getMessage()));
+
         checkDeletedReview(review);
         if (user.getRole() == UserRoleEnum.CUSTOMER) {
             checkCreatedBy(review, user.getUsername());
         }
 
+        store.updateRating(review.getRating(), 0);
+        storeRepository.save(store);
+
         review.setDeletedBy(user.getUsername());
         review.setDeletedDate(LocalDateTime.now());
-
         reviewRepository.save(review);
 
         return new ReviewIdResponseDto(review.getId());

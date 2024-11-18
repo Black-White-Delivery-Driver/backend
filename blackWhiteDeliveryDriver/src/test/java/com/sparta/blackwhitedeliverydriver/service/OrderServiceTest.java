@@ -103,7 +103,7 @@ class OrderServiceTest {
         OrderAddRequestDto request = new OrderAddRequestDto(OrderTypeEnum.ONLINE);
 
         given(userRepository.findById(any())).willReturn(Optional.ofNullable(user));
-        given(basketRepository.findAllByUser(any())).willReturn(List.of(basket));
+        given(basketRepository.findAllByUserAndNotDeleted(any())).willReturn(List.of(basket));
         given(orderRepository.save(any())).willReturn(order);
         when(orderProductRepository.saveAll(any())).thenReturn(List.of(orderProduct));
         doNothing().when(basketRepository).deleteAll(any());
@@ -265,62 +265,6 @@ class OrderServiceTest {
         assertEquals(OrderExceptionMessage.ORDER_USER_NOT_EQUALS.getMessage(), exception.getMessage());
     }
 
-    /*
-    @Test
-    @DisplayName("주문 목록 조회 성공")
-    void getOrders_success() {
-        //given
-        UUID orderId = UUID.randomUUID();
-        UUID storeId = UUID.randomUUID();
-        String username = "user";
-        String storeName = "store";
-        User user = User.builder()
-                .username(username)
-                .role(UserRoleEnum.CUSTOMER)
-                .build();
-        Store store = Store.builder()
-                .storeId(storeId)
-                .storeName(storeName)
-                .build();
-        Order order = Order.builder()
-                .id(orderId)
-                .user(user)
-                .store(store)
-                .status(OrderStatusEnum.CREATE)
-                .discountAmount(0)
-                .discountRate(0)
-                .finalPay(10000)
-                .build();
-
-        given(userRepository.findById(any())).willReturn(Optional.ofNullable(user));
-        when(orderRepository.findAllByUser(any())).thenReturn(List.of(order));
-
-        //when
-        List<OrderGetResponseDto> responseList = orderService.getOrders(username);
-
-        //then
-        assertEquals(username, responseList.get(0).getUsername());
-        assertEquals(orderId, responseList.get(0).getOrderId());
-        assertEquals(order.getFinalPay(), responseList.get(0).getFinalPay());
-    }
-
-    @Test
-    @DisplayName("주문 목록 조회 실패 : 유저가 존재하지 않는 경우")
-    void getOrders_fail() {
-        //given
-        String username = "user1";
-
-        when(userRepository.findById(any())).thenReturn(Optional.empty());
-
-        //when & then
-        Exception exception = assertThrows(NullPointerException.class,
-                () -> orderService.getOrders(username));
-
-        assertEquals(ExceptionMessage.USER_NOT_FOUND.getMessage(), exception.getMessage());
-    }
-
-     */
-
     @Test
     @DisplayName("주문 상태 수정 성공")
     void updateOrderStatus_success() {
@@ -342,7 +286,7 @@ class OrderServiceTest {
                 .id(orderId)
                 .user(user)
                 .store(store)
-                .status(OrderStatusEnum.CREATE)
+                .status(OrderStatusEnum.PENDING)
                 .discountAmount(0)
                 .discountRate(0)
                 .finalPay(10000)

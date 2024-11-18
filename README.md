@@ -22,18 +22,18 @@
 ![image](https://github.com/user-attachments/assets/cf43e665-b218-4ff4-ba56-37cf31efa940)
 프로젝트는 gradle 빌드 후 실행할 수 있습니다. 자세한 방법은 아래 단계를 따릅니다 :
 1. ./gradlew clean build -x test로 빌드를 실행합니다.
-2. /build/libs 폴더에 생성된 JAR 파일을 nohup java -jar [JAR파일명] & 명령어로 백그라운드에서 실행합니다.
+2. /build/libs 폴더에 생성된 JAR 파일을 nohup java -jar {JAR파일명} & 명령어로 백그라운드에서 실행합니다.
 
 ## 기술 스택
 - JDK : ![JAVA 17](https://img.shields.io/badge/JAVA-17-blue)
-- Framework : ![Spring Boot](https://img.shields.io/badge/Spring%20Boot%20(JPA%2C%20QueryDSL)-6DB33F?style=flat&logo=springboot&logoColor=white) ![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat&logo=springsecurity&logoColor=white)
+- Framework : ![Spring Boot](https://img.shields.io/badge/Spring%20Boot%20(JPA)-6DB33F?style=flat&logo=springboot&logoColor=white) ![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat&logo=springsecurity&logoColor=white)
 - DB : ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192.svg?logo=postgresql&logoColor=white)
 - Build Tool : ![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?logo=gradle&logoColor=white)
-- Server : ![AWS EC2](https://img.shields.io/badge/Amazon%20AWS-FF9900.svg?logo=amazon-aws&logoColor=white)
+- Server : ![AWS EC2](https://img.shields.io/badge/AWS%20EC2-FF9900.svg?logo=amazon-aws&logoColor=white) ![AWS RDS](https://img.shields.io/badge/AWS%20RDS-527FFF.svg?logo=amazon-aws&logoColor=white)
 - IDE : ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000.svg?logo=intellij-idea&logoColor=white)
 
 ## ERD
-![image](https://github.com/user-attachments/assets/305c341e-b44e-4f60-bc4d-6e558732df42)
+![image](https://github.com/user-attachments/assets/7a38a14a-295f-4f49-82ca-f37d860fb219)
 
 ## API Docs
-- [Notion 링크](https://teamsparta.notion.site/API-03c371b833e149abad18fbe8b874fae9)
+- [Notion 링크](https://teamsparta.notion.site/API-195e3bb2fa6f4021aa9c8fe3e36b6717)

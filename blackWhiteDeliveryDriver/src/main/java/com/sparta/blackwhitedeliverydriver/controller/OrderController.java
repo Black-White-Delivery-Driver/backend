@@ -57,10 +57,10 @@ public class OrderController {
     @GetMapping//테스트 완료
     public ResponseEntity<Page<OrderGetResponseDto>> getOrders(
             @AuthenticationPrincipal UserDetailsImpl userDetails,
-            @RequestParam("page") int page,
-            @RequestParam("size") int size,
-            @RequestParam("sortBy") String sortBy,
-            @RequestParam("isAsc") boolean isAsc) {
+            @RequestParam(value = "page", defaultValue = "1") int page,
+            @RequestParam(value = "size", defaultValue = "10") int size,
+            @RequestParam(value = "sortBy", defaultValue = "createdDate") String sortBy,
+            @RequestParam(value = "isAsc", defaultValue = "true") boolean isAsc) {
         //주문 목록 조회
         Page<OrderGetResponseDto> responseList = orderService.getOrders(userDetails.getUsername(), page - 1, size,
                 sortBy, isAsc);
@@ -72,10 +72,10 @@ public class OrderController {
     @GetMapping("/stores/{storeId}")//테스트 완료
     public ResponseEntity<Page<OrderGetResponseDto>> getOrdersByStore(
             @AuthenticationPrincipal UserDetailsImpl userDetails,
-            @RequestParam("page") int page,
-            @RequestParam("size") int size,
-            @RequestParam("sortBy") String sortBy,
-            @RequestParam("isAsc") boolean isAsc,
+            @RequestParam(value = "page", defaultValue = "1") int page,
+            @RequestParam(value = "size", defaultValue = "10") int size,
+            @RequestParam(value = "sortBy", defaultValue = "createdDate") String sortBy,
+            @RequestParam(value = "isAsc", defaultValue = "true") boolean isAsc,
             @PathVariable UUID storeId) {
         //주문 목록 조회
         Page<OrderGetResponseDto> responseList = orderService.getOrdersByStore(userDetails.getUsername(), page - 1,
@@ -85,7 +85,7 @@ public class OrderController {
         return ResponseEntity.status(HttpStatus.OK).body(responseList);
     }
 
-    @Secured({"ROLE_OWNER", "ROEL_MASTER", "ROLE_MANAGER"})
+    @Secured({"ROLE_OWNER", "ROLE_MASTER", "ROLE_MANAGER"})
     @PutMapping
     public ResponseEntity<OrderResponseDto> updateOrderStatus(@AuthenticationPrincipal UserDetailsImpl userDetails,
                                                               @RequestBody @Valid OrderUpdateRequestDto request) {
@@ -109,13 +109,13 @@ public class OrderController {
     @GetMapping("/search")//테스트 완료
     public ResponseEntity<Page<OrderGetResponseDto>> searchOrders(
             @RequestParam("storeName") String storeName,
-            @RequestParam("page") int page,
-            @RequestParam("size") int size,
-            @RequestParam("sortBy") String sortBy,
-            @RequestParam("isAsc") boolean isAsc) {
+            @RequestParam(value = "page", defaultValue = "1") int page,
+            @RequestParam(value = "size", defaultValue = "10") int size,
+            @RequestParam(value = "sortBy", defaultValue = "createdDate") String sortBy,
+            @RequestParam(value = "isAsc", defaultValue = "true") boolean isAsc) {
         // 서비스 호출
         Page<OrderGetResponseDto> responseList = orderService.searchOrdersByStoreName(
-                storeName, page-1, size, sortBy, isAsc);
+                storeName, page - 1, size, sortBy, isAsc);
 
         return ResponseEntity.ok(responseList);
     }

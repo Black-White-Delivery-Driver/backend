@@ -50,9 +50,9 @@ public class ProductController {
 
     @Secured({"ROLE_OWNER", "ROLE_MANAGER", "ROLE_MASTER"})
     @PostMapping("/")
-    public ResponseEntity<?> createProductByOwner(@RequestBody CreateProductRequestDto requestDto,
+    public ResponseEntity<?> createProduct(@RequestBody CreateProductRequestDto requestDto,
                                         @AuthenticationPrincipal UserDetailsImpl userDetails) {
-        ProductIdResponseDto productIdResponseDto = productService.createProductByOwner(requestDto, userDetails);
+        ProductIdResponseDto productIdResponseDto = productService.createProduct(requestDto, userDetails);
         return ResponseEntity.status(HttpStatus.CREATED).body(productIdResponseDto);
     }
 

@@ -139,10 +139,6 @@ public class ProductService {
                 }
                 else { throw new NullPointerException(ProductExceptionMessage.PRODUCT_NOT_FOUND.getMessage()); }
             }
-            else if(curUser.get().getRole().equals(UserRoleEnum.MANAGER) || curUser.get().getRole().equals(UserRoleEnum.MASTER)){
-                // 관리자가 점주의 가게 등록
-                throw new IllegalArgumentException(StoreExceptionMessage.FORBIDDEN_ACCESS.getMessage());
-            }
         }
         else { throw new NullPointerException(ExceptionMessage.USER_NOT_FOUND.getMessage()); }
 

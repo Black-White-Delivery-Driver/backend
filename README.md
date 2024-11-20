@@ -39,5 +39,5 @@
 - [Notion 링크](https://teamsparta.notion.site/API-195e3bb2fa6f4021aa9c8fe3e36b6717)
 
 ## 참고자료
-![흑백배달기사 SA](https://kansstory.tistory.com/12)
-![흑백배달기사 컨벤션](https://kansstory.tistory.com/20)
+[흑백배달기사 SA](https://kansstory.tistory.com/12)
+[흑백배달기사 컨벤션](https://kansstory.tistory.com/20)

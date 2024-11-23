@@ -1,9 +1,10 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.order.dto;
 
-import com.sparta.blackwhitedeliverydriver.entity.Order;
-import com.sparta.blackwhitedeliverydriver.entity.OrderProduct;
-import com.sparta.blackwhitedeliverydriver.entity.OrderStatusEnum;
-import com.sparta.blackwhitedeliverydriver.entity.OrderTypeEnum;
+import com.sparta.blackwhitedeliverydriver.product.dto.ProductResponseDto;
+import com.sparta.blackwhitedeliverydriver.order.entity.Order;
+import com.sparta.blackwhitedeliverydriver.order.entity.OrderProduct;
+import com.sparta.blackwhitedeliverydriver.order.entity.OrderStatusEnum;
+import com.sparta.blackwhitedeliverydriver.order.entity.OrderTypeEnum;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;

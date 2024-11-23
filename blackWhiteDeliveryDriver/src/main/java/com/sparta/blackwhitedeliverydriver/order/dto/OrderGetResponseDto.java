@@ -1,8 +1,8 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.order.dto;
 
-import com.sparta.blackwhitedeliverydriver.entity.Order;
-import com.sparta.blackwhitedeliverydriver.entity.OrderStatusEnum;
-import com.sparta.blackwhitedeliverydriver.entity.OrderTypeEnum;
+import com.sparta.blackwhitedeliverydriver.order.entity.Order;
+import com.sparta.blackwhitedeliverydriver.order.entity.OrderStatusEnum;
+import com.sparta.blackwhitedeliverydriver.order.entity.OrderTypeEnum;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

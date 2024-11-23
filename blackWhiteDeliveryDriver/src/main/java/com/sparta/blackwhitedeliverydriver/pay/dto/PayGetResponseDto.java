@@ -1,7 +1,7 @@
 package com.sparta.blackwhitedeliverydriver.pay.dto;
 
-import com.sparta.blackwhitedeliverydriver.pay.entity.Pay;
-import com.sparta.blackwhitedeliverydriver.pay.entity.PayStatusEnum;
+import com.sparta.blackwhitedeliverydriver.model.pay.entity.Pay;
+import com.sparta.blackwhitedeliverydriver.model.pay.entity.PayStatusEnum;
 import java.time.LocalDateTime;
 import java.util.UUID;
 import lombok.AllArgsConstructor;

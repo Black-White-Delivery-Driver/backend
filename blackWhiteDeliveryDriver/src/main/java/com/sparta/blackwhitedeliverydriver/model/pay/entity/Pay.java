@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.pay.entity;
+package com.sparta.blackwhitedeliverydriver.model.pay.entity;
 
 import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
-import com.sparta.blackwhitedeliverydriver.order.entity.Order;
+import com.sparta.blackwhitedeliverydriver.model.order.entity.Order;
 import com.sparta.blackwhitedeliverydriver.pay.dto.PayApproveResponseDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

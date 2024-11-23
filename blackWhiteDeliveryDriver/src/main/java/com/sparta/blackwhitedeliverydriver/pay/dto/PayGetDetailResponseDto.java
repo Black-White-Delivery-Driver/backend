@@ -1,9 +1,9 @@
 package com.sparta.blackwhitedeliverydriver.pay.dto;
 
 import com.sparta.blackwhitedeliverydriver.order.dto.OrderGetDetailResponseDto;
-import com.sparta.blackwhitedeliverydriver.order.entity.OrderProduct;
-import com.sparta.blackwhitedeliverydriver.pay.entity.Pay;
-import com.sparta.blackwhitedeliverydriver.pay.entity.PayStatusEnum;
+import com.sparta.blackwhitedeliverydriver.model.order.entity.OrderProduct;
+import com.sparta.blackwhitedeliverydriver.model.pay.entity.Pay;
+import com.sparta.blackwhitedeliverydriver.model.pay.entity.PayStatusEnum;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;

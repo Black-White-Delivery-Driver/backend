@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.order.controller;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
@@ -15,16 +15,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sparta.blackwhitedeliverydriver.config.TestSecurityConfig;
-import com.sparta.blackwhitedeliverydriver.dto.OrderAddRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.OrderGetDetailResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.OrderGetResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.OrderResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.OrderUpdateRequestDto;
-import com.sparta.blackwhitedeliverydriver.entity.OrderStatusEnum;
-import com.sparta.blackwhitedeliverydriver.entity.OrderTypeEnum;
-import com.sparta.blackwhitedeliverydriver.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.order.dto.OrderAddRequestDto;
+import com.sparta.blackwhitedeliverydriver.order.dto.OrderGetDetailResponseDto;
+import com.sparta.blackwhitedeliverydriver.order.dto.OrderGetResponseDto;
+import com.sparta.blackwhitedeliverydriver.order.dto.OrderResponseDto;
+import com.sparta.blackwhitedeliverydriver.order.dto.OrderUpdateRequestDto;
+import com.sparta.blackwhitedeliverydriver.order.entity.OrderStatusEnum;
+import com.sparta.blackwhitedeliverydriver.order.entity.OrderTypeEnum;
+import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
 import com.sparta.blackwhitedeliverydriver.mock.user.MockUser;
-import com.sparta.blackwhitedeliverydriver.service.OrderService;
+import com.sparta.blackwhitedeliverydriver.order.service.OrderService;
 import java.util.List;
 import java.util.UUID;
 import org.junit.jupiter.api.DisplayName;

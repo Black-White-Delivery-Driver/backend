@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.bascket.dto;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -13,10 +13,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Getter
 @Builder
-public class BasketUpdateRequestDto {
+public class BasketAddRequestDto {
     @NotNull
-    private UUID basketId;
-
+    private UUID productId;
     @NotNull
     @Min(value = 1)
     @Max(value = 99)

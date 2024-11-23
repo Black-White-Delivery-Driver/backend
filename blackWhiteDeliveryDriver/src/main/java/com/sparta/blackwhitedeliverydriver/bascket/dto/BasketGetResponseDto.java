@@ -1,6 +1,6 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.bascket.dto;
 
-import com.sparta.blackwhitedeliverydriver.entity.Basket;
+import com.sparta.blackwhitedeliverydriver.bascket.entity.Basket;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.repository;
+package com.sparta.blackwhitedeliverydriver.bascket.repository;
 
-import com.sparta.blackwhitedeliverydriver.entity.Basket;
-import com.sparta.blackwhitedeliverydriver.entity.User;
+import com.sparta.blackwhitedeliverydriver.bascket.entity.Basket;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.data.domain.Page;

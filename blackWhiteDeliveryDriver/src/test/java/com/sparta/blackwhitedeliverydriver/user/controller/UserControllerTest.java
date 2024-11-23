@@ -18,7 +18,7 @@ import com.sparta.blackwhitedeliverydriver.user.dto.SignupRequestDto;
 import com.sparta.blackwhitedeliverydriver.user.dto.UpdateUserRequestDto;
 import com.sparta.blackwhitedeliverydriver.user.dto.UserResponseDto;
 import com.sparta.blackwhitedeliverydriver.user.dto.UsernameResponseDto;
-import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.UserRoleEnum;
 import com.sparta.blackwhitedeliverydriver.user.exception.ExceptionMessage;
 import com.sparta.blackwhitedeliverydriver.mock.user.MockUser;
 import com.sparta.blackwhitedeliverydriver.user.service.UserService;

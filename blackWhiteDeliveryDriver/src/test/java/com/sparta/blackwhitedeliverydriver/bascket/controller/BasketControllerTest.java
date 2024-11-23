@@ -15,7 +15,7 @@ import com.sparta.blackwhitedeliverydriver.bascket.dto.BasketAddRequestDto;
 import com.sparta.blackwhitedeliverydriver.bascket.dto.BasketGetResponseDto;
 import com.sparta.blackwhitedeliverydriver.bascket.dto.BasketResponseDto;
 import com.sparta.blackwhitedeliverydriver.bascket.dto.BasketUpdateRequestDto;
-import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.UserRoleEnum;
 import com.sparta.blackwhitedeliverydriver.mock.user.MockUser;
 import com.sparta.blackwhitedeliverydriver.bascket.service.BasketService;
 import java.util.List;

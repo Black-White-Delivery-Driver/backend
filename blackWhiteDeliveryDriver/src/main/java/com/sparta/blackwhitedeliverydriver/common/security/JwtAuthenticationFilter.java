@@ -2,7 +2,7 @@ package com.sparta.blackwhitedeliverydriver.common.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sparta.blackwhitedeliverydriver.common.dto.LoginRequestDto;
-import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.UserRoleEnum;
 import com.sparta.blackwhitedeliverydriver.common.jwt.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;

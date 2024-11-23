@@ -2,7 +2,7 @@ package com.sparta.blackwhitedeliverydriver.order.dto;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-import com.sparta.blackwhitedeliverydriver.order.entity.OrderStatusEnum;
+import com.sparta.blackwhitedeliverydriver.model.order.entity.OrderStatusEnum;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;

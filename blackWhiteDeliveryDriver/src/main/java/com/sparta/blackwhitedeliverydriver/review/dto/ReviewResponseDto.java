@@ -1,6 +1,6 @@
 package com.sparta.blackwhitedeliverydriver.review.dto;
 
-import com.sparta.blackwhitedeliverydriver.review.entity.Review;
+import com.sparta.blackwhitedeliverydriver.model.review.entity.Review;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

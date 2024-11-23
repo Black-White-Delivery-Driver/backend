@@ -1,6 +1,6 @@
-package com.sparta.blackwhitedeliverydriver.review.repository;
+package com.sparta.blackwhitedeliverydriver.model.review.repository;
 
-import com.sparta.blackwhitedeliverydriver.review.entity.Review;
+import com.sparta.blackwhitedeliverydriver.model.review.entity.Review;
 import java.util.UUID;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

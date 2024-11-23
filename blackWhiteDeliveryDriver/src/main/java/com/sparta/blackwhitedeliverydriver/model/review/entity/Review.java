@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.review.entity;
+package com.sparta.blackwhitedeliverydriver.model.review.entity;
 
 import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
-import com.sparta.blackwhitedeliverydriver.order.entity.Order;
+import com.sparta.blackwhitedeliverydriver.model.order.entity.Order;
 import com.sparta.blackwhitedeliverydriver.review.dto.ReviewRequestDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

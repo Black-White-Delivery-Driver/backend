@@ -1,6 +1,6 @@
-package com.sparta.blackwhitedeliverydriver.store.entity;
+package com.sparta.blackwhitedeliverydriver.model.store.entity;
 
-import com.sparta.blackwhitedeliverydriver.category.entity.Category;
+import com.sparta.blackwhitedeliverydriver.model.category.entity.Category;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

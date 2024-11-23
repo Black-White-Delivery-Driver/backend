@@ -1,6 +1,6 @@
-package com.sparta.blackwhitedeliverydriver.store.repository;
+package com.sparta.blackwhitedeliverydriver.model.store.repository;
 
-import com.sparta.blackwhitedeliverydriver.store.entity.StoreCategory;
+import com.sparta.blackwhitedeliverydriver.model.store.entity.StoreCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

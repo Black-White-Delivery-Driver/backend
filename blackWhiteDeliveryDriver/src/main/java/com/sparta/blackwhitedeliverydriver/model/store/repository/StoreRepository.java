@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.store.repository;
+package com.sparta.blackwhitedeliverydriver.model.store.repository;
 
-import com.sparta.blackwhitedeliverydriver.store.entity.Store;
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.store.entity.Store;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
 import jakarta.validation.constraints.NotBlank;
 import java.util.Optional;
 import java.util.UUID;

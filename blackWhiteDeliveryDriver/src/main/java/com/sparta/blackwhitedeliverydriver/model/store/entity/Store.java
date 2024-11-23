@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.store.entity;
+package com.sparta.blackwhitedeliverydriver.model.store.entity;
 
 import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
 import com.sparta.blackwhitedeliverydriver.store.dto.StoreRequestDto;
 import com.sparta.blackwhitedeliverydriver.store.dto.StoreByMasterRequestDto;
 import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;

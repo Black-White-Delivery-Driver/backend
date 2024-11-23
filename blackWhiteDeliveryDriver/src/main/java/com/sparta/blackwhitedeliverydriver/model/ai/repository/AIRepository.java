@@ -1,6 +1,6 @@
-package com.sparta.blackwhitedeliverydriver.ai.repository;
+package com.sparta.blackwhitedeliverydriver.model.ai.repository;
 
-import com.sparta.blackwhitedeliverydriver.ai.entity.AI;
+import com.sparta.blackwhitedeliverydriver.model.ai.entity.AI;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 

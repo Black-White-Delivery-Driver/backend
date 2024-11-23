@@ -2,9 +2,9 @@ package com.sparta.blackwhitedeliverydriver.ai.service;
 
 import com.sparta.blackwhitedeliverydriver.ai.dto.AIRequestDto;
 import com.sparta.blackwhitedeliverydriver.ai.dto.AIResponseDto;
-import com.sparta.blackwhitedeliverydriver.ai.entity.AI;
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
-import com.sparta.blackwhitedeliverydriver.ai.repository.AIRepository;
+import com.sparta.blackwhitedeliverydriver.model.ai.entity.AI;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.ai.repository.AIRepository;
 import jakarta.validation.Valid;
 import java.net.URI;
 import java.util.ArrayList;

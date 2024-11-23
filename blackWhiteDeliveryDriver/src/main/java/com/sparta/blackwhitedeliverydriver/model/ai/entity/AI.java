@@ -1,9 +1,9 @@
-package com.sparta.blackwhitedeliverydriver.ai.entity;
+package com.sparta.blackwhitedeliverydriver.model.ai.entity;
 
 import com.sparta.blackwhitedeliverydriver.ai.dto.AIRequestDto;
 import com.sparta.blackwhitedeliverydriver.ai.dto.AIResponseDto;
 import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

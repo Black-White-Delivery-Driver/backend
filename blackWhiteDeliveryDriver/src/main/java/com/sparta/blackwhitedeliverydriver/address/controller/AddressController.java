@@ -1,10 +1,10 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.address.controller;
 
-import com.sparta.blackwhitedeliverydriver.dto.AddressIdResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.AddressRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.AddressResponseDto;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
-import com.sparta.blackwhitedeliverydriver.service.AddressService;
+import com.sparta.blackwhitedeliverydriver.address.dto.AddressIdResponseDto;
+import com.sparta.blackwhitedeliverydriver.address.dto.AddressRequestDto;
+import com.sparta.blackwhitedeliverydriver.address.dto.AddressResponseDto;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.address.service.AddressService;
 import jakarta.validation.Valid;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;

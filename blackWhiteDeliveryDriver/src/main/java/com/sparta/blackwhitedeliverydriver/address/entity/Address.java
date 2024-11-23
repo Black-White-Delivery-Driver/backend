@@ -1,6 +1,8 @@
-package com.sparta.blackwhitedeliverydriver.entity;
+package com.sparta.blackwhitedeliverydriver.address.entity;
 
-import com.sparta.blackwhitedeliverydriver.dto.AddressRequestDto;
+import com.sparta.blackwhitedeliverydriver.address.dto.AddressRequestDto;
+import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -19,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Table(name = "p_address")
-public class Address extends BaseEntity{
+public class Address extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;

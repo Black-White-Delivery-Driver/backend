@@ -1,10 +1,9 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.user.controller;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -15,15 +14,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sparta.blackwhitedeliverydriver.config.TestSecurityConfig;
-import com.sparta.blackwhitedeliverydriver.dto.SignupRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.UpdateUserRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.UserResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.UsernameResponseDto;
-import com.sparta.blackwhitedeliverydriver.entity.User;
-import com.sparta.blackwhitedeliverydriver.entity.UserRoleEnum;
-import com.sparta.blackwhitedeliverydriver.exception.ExceptionMessage;
+import com.sparta.blackwhitedeliverydriver.user.dto.SignupRequestDto;
+import com.sparta.blackwhitedeliverydriver.user.dto.UpdateUserRequestDto;
+import com.sparta.blackwhitedeliverydriver.user.dto.UserResponseDto;
+import com.sparta.blackwhitedeliverydriver.user.dto.UsernameResponseDto;
+import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.user.exception.ExceptionMessage;
 import com.sparta.blackwhitedeliverydriver.mock.user.MockUser;
-import com.sparta.blackwhitedeliverydriver.service.UserService;
+import com.sparta.blackwhitedeliverydriver.user.service.UserService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

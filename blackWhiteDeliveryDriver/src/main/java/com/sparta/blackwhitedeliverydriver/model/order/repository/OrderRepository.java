@@ -1,8 +1,8 @@
-package com.sparta.blackwhitedeliverydriver.order.repository;
+package com.sparta.blackwhitedeliverydriver.model.order.repository;
 
-import com.sparta.blackwhitedeliverydriver.order.entity.Order;
-import com.sparta.blackwhitedeliverydriver.store.entity.Store;
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.order.entity.Order;
+import com.sparta.blackwhitedeliverydriver.model.store.entity.Store;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;

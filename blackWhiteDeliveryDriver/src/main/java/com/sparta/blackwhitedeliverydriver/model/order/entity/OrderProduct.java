@@ -1,8 +1,8 @@
-package com.sparta.blackwhitedeliverydriver.order.entity;
+package com.sparta.blackwhitedeliverydriver.model.order.entity;
 
-import com.sparta.blackwhitedeliverydriver.bascket.entity.Basket;
+import com.sparta.blackwhitedeliverydriver.model.bascket.entity.Basket;
 import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
-import com.sparta.blackwhitedeliverydriver.product.entity.Product;
+import com.sparta.blackwhitedeliverydriver.model.product.entity.Product;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

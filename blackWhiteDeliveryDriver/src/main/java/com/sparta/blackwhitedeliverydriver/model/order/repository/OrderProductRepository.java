@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.order.repository;
+package com.sparta.blackwhitedeliverydriver.model.order.repository;
 
-import com.sparta.blackwhitedeliverydriver.order.entity.Order;
-import com.sparta.blackwhitedeliverydriver.order.entity.OrderProduct;
+import com.sparta.blackwhitedeliverydriver.model.order.entity.Order;
+import com.sparta.blackwhitedeliverydriver.model.order.entity.OrderProduct;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;

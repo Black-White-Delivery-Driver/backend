@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.order.entity;
+package com.sparta.blackwhitedeliverydriver.model.order.entity;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;

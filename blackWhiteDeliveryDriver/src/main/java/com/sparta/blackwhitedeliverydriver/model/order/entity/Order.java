@@ -1,9 +1,9 @@
-package com.sparta.blackwhitedeliverydriver.order.entity;
+package com.sparta.blackwhitedeliverydriver.model.order.entity;
 
 import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
-import com.sparta.blackwhitedeliverydriver.review.entity.Review;
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
-import com.sparta.blackwhitedeliverydriver.store.entity.Store;
+import com.sparta.blackwhitedeliverydriver.model.review.entity.Review;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.store.entity.Store;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

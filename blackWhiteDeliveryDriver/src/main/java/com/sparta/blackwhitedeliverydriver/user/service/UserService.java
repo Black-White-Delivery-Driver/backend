@@ -1,13 +1,13 @@
-package com.sparta.blackwhitedeliverydriver.service;
+package com.sparta.blackwhitedeliverydriver.user.service;
 
-import com.sparta.blackwhitedeliverydriver.dto.SignupRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.UpdateUserRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.UserResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.UsernameResponseDto;
-import com.sparta.blackwhitedeliverydriver.entity.User;
-import com.sparta.blackwhitedeliverydriver.entity.UserRoleEnum;
-import com.sparta.blackwhitedeliverydriver.exception.ExceptionMessage;
-import com.sparta.blackwhitedeliverydriver.repository.UserRepository;
+import com.sparta.blackwhitedeliverydriver.user.dto.SignupRequestDto;
+import com.sparta.blackwhitedeliverydriver.user.dto.UpdateUserRequestDto;
+import com.sparta.blackwhitedeliverydriver.user.dto.UserResponseDto;
+import com.sparta.blackwhitedeliverydriver.user.dto.UsernameResponseDto;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.user.exception.ExceptionMessage;
+import com.sparta.blackwhitedeliverydriver.user.repository.UserRepository;
 import jakarta.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.Optional;

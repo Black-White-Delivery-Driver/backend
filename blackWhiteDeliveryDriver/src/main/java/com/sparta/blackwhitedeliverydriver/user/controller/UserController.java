@@ -1,12 +1,12 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.user.controller;
 
-import com.sparta.blackwhitedeliverydriver.dto.SignupRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.UsernameResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.UpdateUserRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.UserResponseDto;
-import com.sparta.blackwhitedeliverydriver.entity.UserRoleEnum;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
-import com.sparta.blackwhitedeliverydriver.service.UserService;
+import com.sparta.blackwhitedeliverydriver.user.dto.SignupRequestDto;
+import com.sparta.blackwhitedeliverydriver.user.dto.UsernameResponseDto;
+import com.sparta.blackwhitedeliverydriver.user.dto.UpdateUserRequestDto;
+import com.sparta.blackwhitedeliverydriver.user.dto.UserResponseDto;
+import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.user.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

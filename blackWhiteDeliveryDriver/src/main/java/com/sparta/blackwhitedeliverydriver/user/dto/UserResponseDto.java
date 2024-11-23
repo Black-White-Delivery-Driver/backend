@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.user.dto;
 
-import com.sparta.blackwhitedeliverydriver.entity.User;
-import com.sparta.blackwhitedeliverydriver.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

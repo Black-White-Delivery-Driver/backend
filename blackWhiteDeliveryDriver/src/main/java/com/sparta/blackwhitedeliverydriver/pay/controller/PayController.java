@@ -1,14 +1,14 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.pay.controller;
 
-import com.sparta.blackwhitedeliverydriver.dto.PayApproveResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.PayGetDetailResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.PayGetResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.PayReadyResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.PayRefundRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.PayRefundResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.PayRequestDto;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
-import com.sparta.blackwhitedeliverydriver.service.PayService;
+import com.sparta.blackwhitedeliverydriver.pay.dto.PayApproveResponseDto;
+import com.sparta.blackwhitedeliverydriver.pay.dto.PayGetDetailResponseDto;
+import com.sparta.blackwhitedeliverydriver.pay.dto.PayGetResponseDto;
+import com.sparta.blackwhitedeliverydriver.pay.dto.PayReadyResponseDto;
+import com.sparta.blackwhitedeliverydriver.pay.dto.PayRefundRequestDto;
+import com.sparta.blackwhitedeliverydriver.pay.dto.PayRefundResponseDto;
+import com.sparta.blackwhitedeliverydriver.pay.dto.PayRequestDto;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.pay.service.PayService;
 import jakarta.validation.Valid;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.pay.dto;
 
 import lombok.Data;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.pay.dto;
 
 import jakarta.validation.constraints.NotNull;
 import java.util.UUID;

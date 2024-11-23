@@ -1,6 +1,5 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.pay.dto;
 
-import java.sql.Timestamp;
 import lombok.Getter;
 import lombok.ToString;
 

@@ -1,8 +1,8 @@
-package com.sparta.blackwhitedeliverydriver.util;
+package com.sparta.blackwhitedeliverydriver.pay.util;
 
-import com.sparta.blackwhitedeliverydriver.entity.Order;
-import com.sparta.blackwhitedeliverydriver.entity.Pay;
-import com.sparta.blackwhitedeliverydriver.entity.User;
+import com.sparta.blackwhitedeliverydriver.order.entity.Order;
+import com.sparta.blackwhitedeliverydriver.pay.entity.Pay;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;

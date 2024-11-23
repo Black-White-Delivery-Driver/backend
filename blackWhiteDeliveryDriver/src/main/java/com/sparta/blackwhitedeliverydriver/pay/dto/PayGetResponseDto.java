@@ -1,10 +1,8 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.pay.dto;
 
-import com.sparta.blackwhitedeliverydriver.entity.OrderProduct;
-import com.sparta.blackwhitedeliverydriver.entity.Pay;
-import com.sparta.blackwhitedeliverydriver.entity.PayStatusEnum;
+import com.sparta.blackwhitedeliverydriver.pay.entity.Pay;
+import com.sparta.blackwhitedeliverydriver.pay.entity.PayStatusEnum;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,9 +13,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PayGetDetailResponseDto {
+public class PayGetResponseDto {
     private UUID payId;
-    private OrderGetDetailResponseDto order;
     private String itemName;
     private PayStatusEnum payStatus;
     private Integer payAmount;
@@ -25,10 +22,9 @@ public class PayGetDetailResponseDto {
     private LocalDateTime approvedAt;
     private LocalDateTime canceledAt;
 
-    public static PayGetDetailResponseDto ofPayAndOrderProducts(Pay pay, List<OrderProduct> products) {
-        return PayGetDetailResponseDto.builder()
+    public static PayGetResponseDto fromPay(Pay pay) {
+        return PayGetResponseDto.builder()
                 .payId(pay.getId())
-                .order(OrderGetDetailResponseDto.of(pay.getOrder(), products))
                 .itemName(pay.getItemName())
                 .payStatus(pay.getPayStatus())
                 .payAmount(pay.getPayAmount())
@@ -37,4 +33,5 @@ public class PayGetDetailResponseDto {
                 .canceledAt(pay.getCanceledAt())
                 .build();
     }
+
 }

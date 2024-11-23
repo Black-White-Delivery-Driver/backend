@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.util;
+package com.sparta.blackwhitedeliverydriver.pay.util;
 
 import java.util.Map;
 import org.springframework.http.HttpEntity;

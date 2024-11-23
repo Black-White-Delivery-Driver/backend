@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.pay.dto;
 
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;

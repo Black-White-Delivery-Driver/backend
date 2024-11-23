@@ -1,5 +1,6 @@
-package com.sparta.blackwhitedeliverydriver.exception;
+package com.sparta.blackwhitedeliverydriver.common.exception;
 
+import com.sparta.blackwhitedeliverydriver.user.exception.ExceptionMessage;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;

@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.config;
+package com.sparta.blackwhitedeliverydriver.common.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

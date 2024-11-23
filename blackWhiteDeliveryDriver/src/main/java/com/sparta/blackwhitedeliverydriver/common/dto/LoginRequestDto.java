@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.common.dto;
 
 import lombok.Getter;
 import lombok.Setter;

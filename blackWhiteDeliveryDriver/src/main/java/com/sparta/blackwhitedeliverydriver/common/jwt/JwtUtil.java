@@ -1,8 +1,8 @@
-package com.sparta.blackwhitedeliverydriver.jwt;
+package com.sparta.blackwhitedeliverydriver.common.jwt;
 
-import com.sparta.blackwhitedeliverydriver.entity.UserRoleEnum;
-import com.sparta.blackwhitedeliverydriver.exception.CustomJwtException;
-import com.sparta.blackwhitedeliverydriver.exception.JwtExceptionMessage;
+import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.common.exception.CustomJwtException;
+import com.sparta.blackwhitedeliverydriver.common.exception.JwtExceptionMessage;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

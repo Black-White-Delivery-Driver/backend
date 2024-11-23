@@ -1,9 +1,9 @@
-package com.sparta.blackwhitedeliverydriver.security;
+package com.sparta.blackwhitedeliverydriver.common.security;
 
-import static com.sparta.blackwhitedeliverydriver.security.SecurityExceptionHandler.jwtExceptionHandler;
+import static com.sparta.blackwhitedeliverydriver.common.security.SecurityExceptionHandler.jwtExceptionHandler;
 
-import com.sparta.blackwhitedeliverydriver.exception.CustomJwtException;
-import com.sparta.blackwhitedeliverydriver.jwt.JwtUtil;
+import com.sparta.blackwhitedeliverydriver.common.exception.CustomJwtException;
+import com.sparta.blackwhitedeliverydriver.common.jwt.JwtUtil;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

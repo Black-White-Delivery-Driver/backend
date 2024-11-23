@@ -1,10 +1,10 @@
-package com.sparta.blackwhitedeliverydriver.config;
+package com.sparta.blackwhitedeliverydriver.common.config;
 
-import com.sparta.blackwhitedeliverydriver.jwt.JwtUtil;
-import com.sparta.blackwhitedeliverydriver.security.AuthValidator;
-import com.sparta.blackwhitedeliverydriver.security.JwtAuthenticationFilter;
-import com.sparta.blackwhitedeliverydriver.security.JwtAuthorizationFilter;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsServiceImpl;
+import com.sparta.blackwhitedeliverydriver.common.jwt.JwtUtil;
+import com.sparta.blackwhitedeliverydriver.common.security.AuthValidator;
+import com.sparta.blackwhitedeliverydriver.common.security.JwtAuthenticationFilter;
+import com.sparta.blackwhitedeliverydriver.common.security.JwtAuthorizationFilter;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

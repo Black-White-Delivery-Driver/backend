@@ -1,6 +1,6 @@
-package com.sparta.blackwhitedeliverydriver.audit;
+package com.sparta.blackwhitedeliverydriver.common.audit;
 
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
 import java.util.Optional;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;

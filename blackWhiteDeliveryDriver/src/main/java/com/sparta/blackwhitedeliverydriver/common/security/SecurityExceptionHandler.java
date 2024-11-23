@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.security;
+package com.sparta.blackwhitedeliverydriver.common.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sparta.blackwhitedeliverydriver.exception.RestApiException;
+import com.sparta.blackwhitedeliverydriver.common.exception.RestApiException;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 

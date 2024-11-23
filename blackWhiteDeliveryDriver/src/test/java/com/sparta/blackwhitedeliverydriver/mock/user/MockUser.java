@@ -1,6 +1,6 @@
 package com.sparta.blackwhitedeliverydriver.mock.user;
 
-import com.sparta.blackwhitedeliverydriver.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import org.springframework.security.test.context.support.WithSecurityContext;

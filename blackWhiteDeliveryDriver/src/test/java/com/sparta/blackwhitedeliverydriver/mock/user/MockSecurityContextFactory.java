@@ -1,8 +1,7 @@
 package com.sparta.blackwhitedeliverydriver.mock.user;
 
-import com.sparta.blackwhitedeliverydriver.entity.User;
-import com.sparta.blackwhitedeliverydriver.jwt.JwtUtil;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;

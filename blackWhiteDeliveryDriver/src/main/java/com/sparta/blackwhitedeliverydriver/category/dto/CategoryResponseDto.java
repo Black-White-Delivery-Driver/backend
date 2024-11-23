@@ -1,6 +1,6 @@
 package com.sparta.blackwhitedeliverydriver.category.dto;
 
-import com.sparta.blackwhitedeliverydriver.category.entity.Category;
+import com.sparta.blackwhitedeliverydriver.model.category.entity.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

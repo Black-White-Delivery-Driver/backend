@@ -7,7 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sparta.blackwhitedeliverydriver.config.TestSecurityConfig;
 import com.sparta.blackwhitedeliverydriver.store.dto.StoreResponseDto;
-import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.UserRoleEnum;
 import com.sparta.blackwhitedeliverydriver.mock.user.MockUser;
 import com.sparta.blackwhitedeliverydriver.store.service.StoreService;
 import java.util.List;

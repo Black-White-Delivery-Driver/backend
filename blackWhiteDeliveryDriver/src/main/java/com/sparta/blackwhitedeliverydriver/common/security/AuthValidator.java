@@ -1,8 +1,8 @@
 package com.sparta.blackwhitedeliverydriver.common.security;
 
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
 import com.sparta.blackwhitedeliverydriver.user.exception.ExceptionMessage;
-import com.sparta.blackwhitedeliverydriver.user.repository.UserRepository;
+import com.sparta.blackwhitedeliverydriver.model.user.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

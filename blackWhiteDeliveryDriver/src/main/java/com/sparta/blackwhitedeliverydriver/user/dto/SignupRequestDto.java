@@ -1,6 +1,6 @@
 package com.sparta.blackwhitedeliverydriver.user.dto;
 
-import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.UserRoleEnum;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Null;

@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.review.dto;
 
 import java.util.UUID;
 import lombok.AllArgsConstructor;

@@ -1,10 +1,10 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.review.controller;
 
-import com.sparta.blackwhitedeliverydriver.dto.ReviewIdResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.ReviewRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.ReviewResponseDto;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
-import com.sparta.blackwhitedeliverydriver.service.ReviewService;
+import com.sparta.blackwhitedeliverydriver.review.dto.ReviewIdResponseDto;
+import com.sparta.blackwhitedeliverydriver.review.dto.ReviewRequestDto;
+import com.sparta.blackwhitedeliverydriver.review.dto.ReviewResponseDto;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.review.service.ReviewService;
 import jakarta.validation.Valid;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;

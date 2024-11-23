@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.address.repository;
+package com.sparta.blackwhitedeliverydriver.model.address.repository;
 
-import com.sparta.blackwhitedeliverydriver.address.entity.Address;
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.address.entity.Address;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
 import java.util.UUID;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

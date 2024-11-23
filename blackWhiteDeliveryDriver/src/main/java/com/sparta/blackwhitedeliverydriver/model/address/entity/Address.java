@@ -1,8 +1,8 @@
-package com.sparta.blackwhitedeliverydriver.address.entity;
+package com.sparta.blackwhitedeliverydriver.model.address.entity;
 
 import com.sparta.blackwhitedeliverydriver.address.dto.AddressRequestDto;
 import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

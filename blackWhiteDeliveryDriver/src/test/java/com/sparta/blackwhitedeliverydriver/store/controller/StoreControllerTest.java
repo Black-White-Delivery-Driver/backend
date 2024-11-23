@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.store.controller;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -6,10 +6,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sparta.blackwhitedeliverydriver.config.TestSecurityConfig;
-import com.sparta.blackwhitedeliverydriver.dto.StoreResponseDto;
-import com.sparta.blackwhitedeliverydriver.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.store.dto.StoreResponseDto;
+import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
 import com.sparta.blackwhitedeliverydriver.mock.user.MockUser;
-import com.sparta.blackwhitedeliverydriver.service.StoreService;
+import com.sparta.blackwhitedeliverydriver.store.service.StoreService;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

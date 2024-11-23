@@ -4,7 +4,7 @@ import com.sparta.blackwhitedeliverydriver.user.dto.SignupRequestDto;
 import com.sparta.blackwhitedeliverydriver.user.dto.UsernameResponseDto;
 import com.sparta.blackwhitedeliverydriver.user.dto.UpdateUserRequestDto;
 import com.sparta.blackwhitedeliverydriver.user.dto.UserResponseDto;
-import com.sparta.blackwhitedeliverydriver.user.entity.UserRoleEnum;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.UserRoleEnum;
 import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
 import com.sparta.blackwhitedeliverydriver.user.service.UserService;
 import jakarta.validation.Valid;

@@ -1,6 +1,6 @@
-package com.sparta.blackwhitedeliverydriver.user.entity;
+package com.sparta.blackwhitedeliverydriver.model.user.entity;
 
-import com.sparta.blackwhitedeliverydriver.address.entity.Address;
+import com.sparta.blackwhitedeliverydriver.model.address.entity.Address;
 import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
 import com.sparta.blackwhitedeliverydriver.user.dto.SignupRequestDto;
 import com.sparta.blackwhitedeliverydriver.user.dto.UpdateUserRequestDto;

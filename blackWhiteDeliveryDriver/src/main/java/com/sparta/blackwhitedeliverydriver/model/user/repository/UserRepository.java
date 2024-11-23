@@ -1,6 +1,6 @@
-package com.sparta.blackwhitedeliverydriver.user.repository;
+package com.sparta.blackwhitedeliverydriver.model.user.repository;
 
-import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.model.user.entity.User;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

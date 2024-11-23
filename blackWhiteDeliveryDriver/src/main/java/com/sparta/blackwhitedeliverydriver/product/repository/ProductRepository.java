@@ -1,7 +1,7 @@
-package com.sparta.blackwhitedeliverydriver.repository;
+package com.sparta.blackwhitedeliverydriver.product.repository;
 
-import com.sparta.blackwhitedeliverydriver.entity.Product;
-import com.sparta.blackwhitedeliverydriver.entity.Store;
+import com.sparta.blackwhitedeliverydriver.product.entity.Product;
+import com.sparta.blackwhitedeliverydriver.store.entity.Store;
 import jakarta.validation.constraints.NotBlank;
 import java.util.List;
 import java.util.Optional;

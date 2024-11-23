@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.product.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;

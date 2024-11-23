@@ -1,12 +1,11 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.product.controller;
 
-import com.sparta.blackwhitedeliverydriver.dto.CreateProductRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.ProductIdResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.ProductRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.ProductResponseDto;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
-import com.sparta.blackwhitedeliverydriver.service.ProductService;
-import java.util.List;
+import com.sparta.blackwhitedeliverydriver.category.dto.CreateProductRequestDto;
+import com.sparta.blackwhitedeliverydriver.product.dto.ProductIdResponseDto;
+import com.sparta.blackwhitedeliverydriver.product.dto.ProductRequestDto;
+import com.sparta.blackwhitedeliverydriver.product.dto.ProductResponseDto;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.product.service.ProductService;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

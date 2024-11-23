@@ -1,8 +1,10 @@
-package com.sparta.blackwhitedeliverydriver.entity;
+package com.sparta.blackwhitedeliverydriver.store.entity;
 
-import com.sparta.blackwhitedeliverydriver.dto.StoreRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.StoreByMasterRequestDto;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.store.dto.StoreRequestDto;
+import com.sparta.blackwhitedeliverydriver.store.dto.StoreByMasterRequestDto;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.store.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -8,7 +8,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class StoreRequestDto {
+public class StoreByMasterRequestDto {
+    @NotBlank
+    private String username;
     @NotBlank
     private String storeName;
     @NotBlank

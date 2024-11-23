@@ -1,6 +1,5 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.store.dto;
 
-import com.sparta.blackwhitedeliverydriver.entity.Store;
 import java.util.UUID;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

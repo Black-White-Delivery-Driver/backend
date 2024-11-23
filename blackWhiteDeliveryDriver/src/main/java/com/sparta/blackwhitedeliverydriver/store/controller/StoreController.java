@@ -1,11 +1,11 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.store.controller;
 
-import com.sparta.blackwhitedeliverydriver.dto.StoreIdResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.StoreRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.StoreResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.StoreByMasterRequestDto;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
-import com.sparta.blackwhitedeliverydriver.service.StoreService;
+import com.sparta.blackwhitedeliverydriver.store.dto.StoreIdResponseDto;
+import com.sparta.blackwhitedeliverydriver.store.dto.StoreRequestDto;
+import com.sparta.blackwhitedeliverydriver.store.dto.StoreResponseDto;
+import com.sparta.blackwhitedeliverydriver.store.dto.StoreByMasterRequestDto;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.store.service.StoreService;
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.UUID;

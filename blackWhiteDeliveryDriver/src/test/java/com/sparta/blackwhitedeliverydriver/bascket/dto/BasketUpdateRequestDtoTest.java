@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.bascket.dto;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
@@ -11,8 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class BasketAddRequestDtoTest {
-
+class BasketUpdateRequestDtoTest {
     private Validator validator;
 
     @BeforeEach
@@ -21,75 +20,74 @@ class BasketAddRequestDtoTest {
     }
 
     @Test
-    @DisplayName("productId가 null인 경우")
+    @DisplayName("basketId가 null인 경우")
     public void testProductIdNotNull() {
-        BasketAddRequestDto request = BasketAddRequestDto.builder()
-                .productId(null)
+        BasketUpdateRequestDto request = BasketUpdateRequestDto.builder()
+                .basketId(null)
                 .quantity(10)
                 .build();
 
-        Set<ConstraintViolation<BasketAddRequestDto>> violations = validator.validate(request);
+        Set<ConstraintViolation<BasketUpdateRequestDto>> violations = validator.validate(request);
         assertThat(violations).isNotEmpty();
     }
 
     @Test
     @DisplayName("quantity가 null인 경우")
     public void testQuantityNotNull() {
-        BasketAddRequestDto request = BasketAddRequestDto.builder()
-                .productId(UUID.randomUUID())
+        BasketUpdateRequestDto request = BasketUpdateRequestDto.builder()
+                .basketId(UUID.randomUUID())
                 .quantity(null)
                 .build();
 
-        Set<ConstraintViolation<BasketAddRequestDto>> violations = validator.validate(request);
+        Set<ConstraintViolation<BasketUpdateRequestDto>> violations = validator.validate(request);
         assertThat(violations).isNotEmpty();
     }
 
     @Test
     @DisplayName("quantity가 1인 경우 (경계값)")
     public void testQuantityMinBoundary() {
-        BasketAddRequestDto request = BasketAddRequestDto.builder()
-                .productId(UUID.randomUUID())
+        BasketUpdateRequestDto request = BasketUpdateRequestDto.builder()
+                .basketId(UUID.randomUUID())
                 .quantity(1)
                 .build();
 
-        Set<ConstraintViolation<BasketAddRequestDto>> violations = validator.validate(request);
+        Set<ConstraintViolation<BasketUpdateRequestDto>> violations = validator.validate(request);
         assertThat(violations).isEmpty();
     }
 
     @Test
     @DisplayName("quantity가 99인 경우 (경계값)")
     public void testQuantityMaxBoundary() {
-        BasketAddRequestDto request = BasketAddRequestDto.builder()
-                .productId(UUID.randomUUID())
+        BasketUpdateRequestDto request = BasketUpdateRequestDto.builder()
+                .basketId(UUID.randomUUID())
                 .quantity(99)
                 .build();
 
-        Set<ConstraintViolation<BasketAddRequestDto>> violations = validator.validate(request);
+        Set<ConstraintViolation<BasketUpdateRequestDto>> violations = validator.validate(request);
         assertThat(violations).isEmpty();
     }
 
     @Test
     @DisplayName("quantity가 0인 경우 (하한 경계 밖)")
     public void testQuantityBelowMin() {
-        BasketAddRequestDto request = BasketAddRequestDto.builder()
-                .productId(UUID.randomUUID())
+        BasketUpdateRequestDto request = BasketUpdateRequestDto.builder()
+                .basketId(UUID.randomUUID())
                 .quantity(0)
                 .build();
 
-        Set<ConstraintViolation<BasketAddRequestDto>> violations = validator.validate(request);
+        Set<ConstraintViolation<BasketUpdateRequestDto>> violations = validator.validate(request);
         assertThat(violations).isNotEmpty();
     }
 
     @Test
     @DisplayName("quantity가 100인 경우 (상한 경계 밖)")
     public void testQuantityAboveMax() {
-        BasketAddRequestDto request = BasketAddRequestDto.builder()
-                .productId(UUID.randomUUID())
+        BasketUpdateRequestDto request = BasketUpdateRequestDto.builder()
+                .basketId(UUID.randomUUID())
                 .quantity(100)
                 .build();
 
-        Set<ConstraintViolation<BasketAddRequestDto>> violations = validator.validate(request);
+        Set<ConstraintViolation<BasketUpdateRequestDto>> violations = validator.validate(request);
         assertThat(violations).isNotEmpty();
     }
 }
-

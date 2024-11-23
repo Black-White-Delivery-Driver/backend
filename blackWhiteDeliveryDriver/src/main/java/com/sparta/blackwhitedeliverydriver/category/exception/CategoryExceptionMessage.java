@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.exception;
+package com.sparta.blackwhitedeliverydriver.category.exception;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

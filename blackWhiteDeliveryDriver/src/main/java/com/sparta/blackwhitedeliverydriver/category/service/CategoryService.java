@@ -1,12 +1,12 @@
-package com.sparta.blackwhitedeliverydriver.service;
+package com.sparta.blackwhitedeliverydriver.category.service;
 
-import com.sparta.blackwhitedeliverydriver.dto.CategoryIdResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.CategoryRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.CategoryResponseDto;
-import com.sparta.blackwhitedeliverydriver.entity.Category;
-import com.sparta.blackwhitedeliverydriver.entity.User;
-import com.sparta.blackwhitedeliverydriver.exception.CategoryExceptionMessage;
-import com.sparta.blackwhitedeliverydriver.repository.CategoryRepository;
+import com.sparta.blackwhitedeliverydriver.category.dto.CategoryIdResponseDto;
+import com.sparta.blackwhitedeliverydriver.category.dto.CategoryRequestDto;
+import com.sparta.blackwhitedeliverydriver.category.dto.CategoryResponseDto;
+import com.sparta.blackwhitedeliverydriver.category.entity.Category;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.category.exception.CategoryExceptionMessage;
+import com.sparta.blackwhitedeliverydriver.category.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

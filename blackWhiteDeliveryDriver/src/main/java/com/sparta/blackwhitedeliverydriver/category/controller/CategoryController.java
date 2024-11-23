@@ -1,9 +1,9 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.category.controller;
 
-import com.sparta.blackwhitedeliverydriver.dto.CategoryIdResponseDto;
-import com.sparta.blackwhitedeliverydriver.dto.CategoryRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.CategoryResponseDto;
-import com.sparta.blackwhitedeliverydriver.service.CategoryService;
+import com.sparta.blackwhitedeliverydriver.category.dto.CategoryIdResponseDto;
+import com.sparta.blackwhitedeliverydriver.category.dto.CategoryRequestDto;
+import com.sparta.blackwhitedeliverydriver.category.dto.CategoryResponseDto;
+import com.sparta.blackwhitedeliverydriver.category.service.CategoryService;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

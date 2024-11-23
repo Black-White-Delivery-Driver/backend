@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.category.entity;
+package com.sparta.blackwhitedeliverydriver.model.category.entity;
 
 import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
 import jakarta.persistence.Column;

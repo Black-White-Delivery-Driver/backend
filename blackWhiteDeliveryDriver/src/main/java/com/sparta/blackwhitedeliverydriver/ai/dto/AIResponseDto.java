@@ -1,4 +1,4 @@
-package com.sparta.blackwhitedeliverydriver.dto;
+package com.sparta.blackwhitedeliverydriver.ai.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

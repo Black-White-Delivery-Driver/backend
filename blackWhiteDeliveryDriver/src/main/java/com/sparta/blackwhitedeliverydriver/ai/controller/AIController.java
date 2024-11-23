@@ -1,9 +1,9 @@
-package com.sparta.blackwhitedeliverydriver.controller;
+package com.sparta.blackwhitedeliverydriver.ai.controller;
 
-import com.sparta.blackwhitedeliverydriver.dto.AIRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.AIResponseDto;
-import com.sparta.blackwhitedeliverydriver.security.UserDetailsImpl;
-import com.sparta.blackwhitedeliverydriver.service.AIService;
+import com.sparta.blackwhitedeliverydriver.ai.dto.AIRequestDto;
+import com.sparta.blackwhitedeliverydriver.ai.dto.AIResponseDto;
+import com.sparta.blackwhitedeliverydriver.common.security.UserDetailsImpl;
+import com.sparta.blackwhitedeliverydriver.ai.service.AIService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

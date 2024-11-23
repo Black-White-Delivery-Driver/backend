@@ -1,7 +1,9 @@
-package com.sparta.blackwhitedeliverydriver.entity;
+package com.sparta.blackwhitedeliverydriver.ai.entity;
 
-import com.sparta.blackwhitedeliverydriver.dto.AIRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.AIResponseDto;
+import com.sparta.blackwhitedeliverydriver.ai.dto.AIRequestDto;
+import com.sparta.blackwhitedeliverydriver.ai.dto.AIResponseDto;
+import com.sparta.blackwhitedeliverydriver.common.entity.BaseEntity;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -20,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Table(name = "p_ai")
-public class AI extends BaseEntity{
+public class AI extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;

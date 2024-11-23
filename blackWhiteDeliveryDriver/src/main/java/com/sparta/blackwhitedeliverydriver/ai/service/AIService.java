@@ -1,10 +1,10 @@
-package com.sparta.blackwhitedeliverydriver.service;
+package com.sparta.blackwhitedeliverydriver.ai.service;
 
-import com.sparta.blackwhitedeliverydriver.dto.AIRequestDto;
-import com.sparta.blackwhitedeliverydriver.dto.AIResponseDto;
-import com.sparta.blackwhitedeliverydriver.entity.AI;
-import com.sparta.blackwhitedeliverydriver.entity.User;
-import com.sparta.blackwhitedeliverydriver.repository.AIRepository;
+import com.sparta.blackwhitedeliverydriver.ai.dto.AIRequestDto;
+import com.sparta.blackwhitedeliverydriver.ai.dto.AIResponseDto;
+import com.sparta.blackwhitedeliverydriver.ai.entity.AI;
+import com.sparta.blackwhitedeliverydriver.user.entity.User;
+import com.sparta.blackwhitedeliverydriver.ai.repository.AIRepository;
 import jakarta.validation.Valid;
 import java.net.URI;
 import java.util.ArrayList;
